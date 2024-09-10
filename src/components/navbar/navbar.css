@@ -1,13 +1,15 @@
 /* src/components/Navbar.css */
-
-.navbar {
+.hidePhone {
+  display: none;
+}
+.navbar-c {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   background-color: transparent;
-  color: white;
   padding: 1rem;
+  /* overflow: hidden; */
 }
 .navbar-logo {
   font-size: 1.5rem;
@@ -27,11 +29,13 @@
   height: 100vh;
   top: 0;
   margin: 0;
+  /* overflow: hidden; */
   transition: all 0.5s ease-in-out;
   transform: translateX(+100%);
 }
 .navbar-links-open {
   transform: translateX(0);
+  right: 0;
 }
 .navbar-item {
   margin: 0.5rem 0;
@@ -41,31 +45,61 @@
   text-decoration: none;
   font-size: 1.2rem;
 }
+@media (min-width: 768px) {
+  .hidePhone {
+    display: none;
+  }
+  .navbar-c {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+    z-index: 100;
+    padding: 1rem;
+  }
+  .navbar-logo {
+    margin-bottom: 0;
+  }
+
+  .navbar-links {
+    position: relative;
+    flex-direction: row;
+    background-color: transparent;
+    width: 100%;
+    height: 2rem;
+    transform: translateX(0);
+  }
+  .navbar-item {
+    margin: 0 1rem;
+  }
+  .menu {
+    display: none;
+  }
+}
+
+/* BURGER MENU */
+
 .menu {
   --s: 1.5rem; /* control the size */
   --c: white; /* the color */
   right: 2rem;
-  z-index: 1;
+  z-index: 2;
   height: var(--s);
   aspect-ratio: 1;
   border: none;
   border-inline: calc(var(--s) / 2) solid #0000;
   box-sizing: content-box;
-  --_g1: linear-gradient(var(--c) 20%, #0000 0 80%, var(--c) 0) no-repeat
-    content-box border-box;
-  --_g2: radial-gradient(circle closest-side at 50% 12.5%, var(--c) 95%, #0000)
-    repeat-y content-box border-box;
-  background: var(--_g2) left var(--_p, 0px) top,
-    var(--_g1) left calc(var(--s) / 10 + var(--_p, 0px)) top,
-    var(--_g2) right var(--_p, 0px) top,
-    var(--_g1) right calc(var(--s) / 10 + var(--_p, 0px)) top;
+  --_g1: linear-gradient(var(--c) 20%, #0000 0 80%, var(--c) 0) no-repeat content-box border-box;
+  --_g2: radial-gradient(circle closest-side at 50% 12.5%, var(--c) 95%, #0000) repeat-y content-box border-box;
+  background: var(--_g2) left var(--_p, 0px) top, var(--_g1) left calc(var(--s) / 10 + var(--_p, 0px)) top,
+    var(--_g2) right var(--_p, 0px) top, var(--_g1) right calc(var(--s) / 10 + var(--_p, 0px)) top;
   background-size: 20% 80%, 40% 100%;
   position: absolute;
   clip-path: inset(0 25%);
   -webkit-mask: linear-gradient(90deg, #0000, #000 25% 75%, #0000);
   cursor: pointer;
-  transition: background-position 0.3s var(--_s, 0.3s),
-    clip-path 0s var(--_s, 0.6s);
+  transition: background-position 0.3s var(--_s, 0.3s), clip-path 0s var(--_s, 0.6s);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -97,32 +131,4 @@
   border: none;
   outline: 2px solid var(--c);
   outline-offset: 5px;
-}
-@media (min-width: 768px) {
-  .navbar {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    background-color: transparent;
-    position: relative;
-    z-index: 100;
-  }
-  .navbar-logo {
-    margin-bottom: 0;
-  }
-
-  .navbar-links {
-    position: relative;
-    flex-direction: row;
-    background-color: transparent;
-    width: 100%;
-    height: 2rem;
-    transform: translateX(0);
-  }
-  .navbar-item {
-    margin: 0 1rem;
-  }
-  .menu {
-    display: none;
-  }
 }

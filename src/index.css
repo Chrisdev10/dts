@@ -6,6 +6,7 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #1a1a1a;
+  overflow-x: hidden;
 }
 
 body,
@@ -20,4 +21,11 @@ html {
   place-items: center;
   min-width: 320px;
   min-height: 100vh; */
+}
+#app {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: black;
 }

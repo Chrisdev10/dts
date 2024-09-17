@@ -7,7 +7,9 @@ export function Content() {
     const url = import.meta.env.VITE_LOCAL_URL_BACKEND;
     axios
       .get(`${url}/event/all`)
-      .then(response => {})
+      .then(response => {
+        console.log(response);
+      })
       .catch(error => {
         console.log(error);
       });

@@ -29,3 +29,12 @@ html {
   overflow-x: hidden;
   background-color: black;
 }
+.section__title {
+  font-family: 'starWars';
+  color: white;
+  margin: 2rem 0;
+}
+@font-face {
+  font-family: 'starWars';
+  src: url('/fonts/Starjedi.ttf') format('truetype');
+}

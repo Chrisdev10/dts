@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "axios": "^1.7.4",
     "bootstrap": "^5.3.3",
     "preact": "^10.22.1",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.8.3",
+    "@types/aos": "^3.0.7",
     "typescript": "^5.2.2",
     "vite": "^5.3.4"
   }

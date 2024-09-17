@@ -18,7 +18,6 @@ export function Navbar() {
     };
     const handleScroll = () => {
       setIsScroll(window.screenY > 20 ? true : false);
-      console.log(window.screenY);
     };
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);

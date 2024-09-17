@@ -10,11 +10,11 @@
     "paths": {
       "react": ["./node_modules/preact/compat/"],
       "react-dom": ["./node_modules/preact/compat/"],
-      "@Comp/*":["./src/components/*"],
-      "@CompAll":["./src/components/index.ts"],
-      "@Assets/*":["./src/assets/*"],
-      "@Pages/*":["./src/pages/*"],
-
+      "@Comp/*": ["./src/components/*"],
+      "@CompAll": ["./src/components/index.ts"],
+      "@Assets/*": ["./src/assets/*"],
+      "@Pages/*": ["./src/pages/*"],
+      "@Dto/*": ["./src/dto/*"]
     },
 
     /* Bundler mode */

@@ -1,19 +1,6 @@
-import { useEffect } from 'preact/hooks';
 import './content.css';
-import axios from 'axios';
 import { Col, Container, Row } from 'react-bootstrap';
 export function Content() {
-  useEffect(() => {
-    const url = import.meta.env.VITE_LOCAL_URL_BACKEND;
-    axios
-      .get(`${url}/event/all`)
-      .then(response => {
-        console.log(response);
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  }, []);
   return (
     <Container fluid className="content">
       <h2 class="section__title">

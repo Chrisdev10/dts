@@ -7,6 +7,7 @@ export interface EventDto {
   image: string;
   description: string;
   address: AddressDto;
+  fileContent: string;
   fromDate: Date;
   toDate: Date;
 }

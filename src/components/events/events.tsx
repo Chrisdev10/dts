@@ -17,12 +17,12 @@ export function Events() {
   }, []);
   return (
     <>
-      <h2 className={'section__title'}>upcoming events {data && data?.statut}</h2>
+      <h2 className={'section__title'}>upcoming events</h2>
       <Carousel style={'height:300px'} interval={6000}>
         {data?.data.map((e, index) => {
           return (
             <Carousel.Item style={'height:300px'} key={`carouselItem${index}`}>
-              <img className="d-block w-100" src={e.image} alt="First slide" />
+              <img className="d-block w-100" src={`data:image/png;base64,${e.fileContent}`} alt="First slide" />
               <Carousel.Caption>
                 <h3>{e.title}</h3>
                 <p>{e.description}</p>

@@ -1,0 +1,111 @@
+.pages_c {
+  height: 100vh;
+  margin-top: 13rem;
+}
+.sign {
+  color: white !important;
+  width: 550px;
+  position: relative;
+  border-radius: 10px;
+  background-color: #292929;
+  box-shadow: -2px 2px 20px 2px #f40099;
+  padding: 2rem;
+  margin: auto;
+  &::before {
+    content: '';
+    position: absolute;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: #8d2cdd;
+    bottom: -20px;
+    left: -20px;
+    transition: all 0.5s ease-in-out;
+    z-index: -1;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: #f40099;
+    bottom: -10px;
+    left: -10px;
+    transition: all 0.5s ease-in-out;
+    z-index: -2;
+  }
+  &:hover {
+    &::before {
+      bottom: -40px;
+      left: -40px;
+    }
+    &::after {
+      bottom: -20px;
+      left: -20px;
+    }
+  }
+}
+.sign-in {
+  color: white !important;
+  border: 0;
+  height: 40px;
+  border-radius: 10px;
+  padding: 4px 7px;
+  background-color: #8d2cdd;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: #f40099;
+    box-shadow: 0 0.5em 0.5em -0.4em #f40099;
+  }
+}
+
+.sign-up {
+  color: #ffffff !important;
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 4px 7px;
+  background-color: #8d2cdd;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: transparent;
+    border: 1px solid #f40099;
+  }
+}
+
+.submit_btn {
+  position: absolute;
+  border: 0;
+  border-radius: 20px;
+  background-color: #f40099;
+  width: 60px;
+  height: 40px;
+  right: 0;
+  top: -2px;
+  z-index: 11;
+}
+@media (max-width: 600px) {
+  .sign {
+    width: 90%;
+    &::before {
+      left: 0;
+      bottom: -20px;
+    }
+    &::after {
+      left: 0;
+      bottom: -10px;
+    }
+    &:hover {
+      &::before {
+        left: 0;
+        bottom: -20px;
+      }
+      &::after {
+        left: 0;
+        bottom: -10px;
+      }
+    }
+  }
+}

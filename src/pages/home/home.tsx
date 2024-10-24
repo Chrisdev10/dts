@@ -1,5 +1,5 @@
 import './home.css';
-import { Header, Content, Events, MyFooter } from '@CompAll';
+import { Header, Content, Events, MyFooter, Navbar } from '@CompAll';
 import AOS from 'aos';
 import { useEffect } from 'preact/hooks';
 export function Home() {
@@ -12,6 +12,7 @@ export function Home() {
   }, []);
   return (
     <>
+      <Navbar />
       <Header />
       <Content />
       <Events data-aos="fade-up" />
